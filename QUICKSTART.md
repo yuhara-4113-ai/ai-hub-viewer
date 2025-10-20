@@ -2,6 +2,8 @@
 
 最速で AI Hub Viewer を動かすための簡潔なガイドです。
 
+**FVM を使用している場合**: [FVM_SETUP.md](FVM_SETUP.md) を参照してください。
+
 ## 5分でスタート
 
 ### 1. クローン
@@ -13,6 +15,9 @@ cd ai-hub-viewer
 ### 2. 依存関係をインストール
 ```bash
 flutter pub get
+
+# FVM を使用している場合
+fvm flutter pub get
 ```
 
 ### 3. APIキーを設定
@@ -28,6 +33,9 @@ cp .env.example .env
 ### 4. 実行
 ```bash
 flutter run
+
+# FVM を使用している場合
+fvm flutter run
 ```
 
 ## APIキーの取得（初めての場合）
@@ -78,6 +86,7 @@ nano .env  # または任意のエディタ
 
 ## 開発コマンド
 
+### 通常の Flutter
 ```bash
 # アプリを起動
 flutter run
@@ -100,6 +109,33 @@ flutter build apk
 # デバイス一覧
 flutter devices
 ```
+
+### FVM を使用する場合
+すべてのコマンドの前に `fvm` を付けてください：
+```bash
+# アプリを起動
+fvm flutter run
+
+# テストを実行
+fvm flutter test
+
+# コード解析
+fvm flutter analyze
+
+# コードフォーマット
+fvm dart format .
+
+# ビルド（Web）
+fvm flutter build web
+
+# ビルド（Android）
+fvm flutter build apk
+
+# デバイス一覧
+fvm flutter devices
+```
+
+詳細は [FVM_SETUP.md](FVM_SETUP.md) を参照してください。
 
 ## トラブルシューティング
 

@@ -11,10 +11,12 @@ Flutter アプリケーションで複数のAI API（Gemini と Claude）に質�
 
 ## 📋 必要要件
 
-- Flutter SDK (3.0.0以上)
+- Flutter SDK (3.0.0以上) または FVM
 - Dart SDK (3.0.0以上)
 - Gemini API キー（無料枠で利用可能）
 - Claude API キー（無料枠で利用可能）
+
+**注意**: FVM (Flutter Version Management) を使用している場合は、[FVM_SETUP.md](FVM_SETUP.md) を参照してください。
 
 ## 🚀 セットアップ
 
@@ -27,6 +29,9 @@ cd ai-hub-viewer
 2. 依存関係をインストール
 ```bash
 flutter pub get
+
+# FVM を使用している場合
+fvm flutter pub get
 ```
 
 3. APIキーの設定
@@ -53,6 +58,9 @@ CLAUDE_API_KEY=your_actual_claude_api_key
 
 ```bash
 flutter run
+
+# FVM を使用している場合
+fvm flutter run
 ```
 
 ## 📱 使用方法
@@ -66,6 +74,9 @@ flutter run
 
 ```bash
 flutter test
+
+# FVM を使用している場合
+fvm flutter test
 ```
 
 ## 📦 使用しているパッケージ
